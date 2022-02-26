@@ -1,5 +1,6 @@
 const answers = document.querySelectorAll('.question button');
 const questions = document.querySelectorAll('.question');
+const NUM_QUESTIONS = 20;
 let score = 0, answeredCurrent = false, currentQuestion, intro = true;
 
 
@@ -37,6 +38,11 @@ function nextQuestion(currentQuestion) {
 		}
 	}
 
+	if (nextQuestion === null) {
+		displayResults(score);
+		return;
+	}
+
 	currentQuestion.style.display = "none";
 	nextQuestion.style.display = "block";
 
@@ -51,9 +57,10 @@ function checkAnswer(answer){
 	if (answer.classList.contains('correct')) {
 		score += 1;
 		correct = true;
-		answer.style.backgroundColor = "green";
+		answer.style.backgroundColor = "#58A556";
 	} else {
 		correct = false;
+		answer.style.backgroundColor = "#BD3520"
 	}
 
 	answeredCurrent = true;
@@ -69,4 +76,8 @@ function showFeedback(result) {
 		currentQuestion.querySelector('.feedback .incorrect').style.display = "flex";
 	}
 	currentQuestion.querySelector('.feedback').style.display = "flex";
+}
+
+function displayResults(score) {
+	console.log(`You scored ${score}/${NUM_QUESTIONS}`);
 }
