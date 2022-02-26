@@ -1,0 +1,208 @@
+/* 
+   ====================
+	LAYOUT
+   ====================
+*/
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70rem;
+	width: 100%;
+	border: 1px solid black;
+}
+
+#intro {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: flex-start;
+	padding-left: 5rem;
+}
+
+#intro span {
+	margin-bottom: 2rem;
+}
+
+section {
+	height: 100%;
+	width: 100%;
+}
+.question {
+	display: none;
+}
+
+.question div {
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+}
+
+.question div * {
+	flex-basis: 35%;
+	margin: 0.8rem;
+	padding: 0.5rem;
+}
+
+.question .response > * {
+	flex-basis: 100%;
+}
+
+.response {
+	display: flex;
+	align-items: center;
+	flex-direction: column wrap;
+}
+
+.question .feedback {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	flex-basis: 70%;
+}
+
+.question .result {
+	display: none;
+}
+
+img {
+	height: 40rem;
+	width: 100%;
+	object-fit: cover;
+}
+
+.response img {
+	height: 10rem;
+	object-fit: contain;
+}
+
+.feedback span {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.question .feedback svg {
+	height: 2rem;
+	margin: 0;
+	padding: 0;
+	padding-right: 0.5rem;
+}
+
+.question .result * {
+	flex-basis: 25%;
+}
+
+/* ====================
+	MEDIA QUERIES
+   ====================
+*/
+
+/* ====================
+	BACKGROUNDS
+   ====================
+*/
+#intro {
+	background-image: url('https://i.imgur.com/9j685Oz.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-position: fixed;
+}
+
+.main {
+	background-color: #fffcf9;
+	background-image: linear-gradient(180deg, #2f4238 50%, #002627 70%, #171916 90%);
+}
+/* 
+   ====================
+	TYPOGRAPHY
+   ====================
+*/
+* {
+font-family: 'Rufina', serif;
+font-weight: 400;
+}
+
+h1 {
+	font-family: 'Chonburi';
+	font-size: 5rem;
+	color: whitesmoke;
+}
+
+h2 {
+	font-size: 2rem;
+	margin: 1rem;
+	color: #EFEFEF;
+	text-align: center;
+}
+
+#intro span {
+	color: whitesmoke;
+	font-size: 1.5rem ;
+}
+
+span {
+	color: #EFEFEF;
+	font-size: 1.3rem;
+	margin: 0;
+}
+
+.result p {
+	margin: auto 0;
+	padding: 0;
+}
+
+.correct svg {
+	color: seagreen;
+}
+
+.incorrect svg {
+	color: red;
+}
+
+/* ====================
+	BUTTONS
+   ====================
+*/
+
+button {
+  align-self: center;
+  background-color: #1C362F;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #EFEFEF;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #EFEFEF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.3rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+button:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
